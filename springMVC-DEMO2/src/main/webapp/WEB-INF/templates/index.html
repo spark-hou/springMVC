@@ -5,10 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-aaaaa
-
+ aaaaa
+ <br>
 <a th:href="@{/testGetMapping}">测试testGetMapping</a>
-
+ <br>
+<a th:href="@{/testServletAPI(userName='admin',password='111')}">测试testServletAPI</a>
+ <br>
+<a th:href="@{/testParam(userName='admin',password='111')}">testParam</a>
+ <br>
+ <form th:action="@{/testpojo}" method="post">
+     用户名：<input type="text" name="username"><br>
+     密码：<input type="password" name="password"><br>
+     性别：<input type="radio" name="sex" value="男">男<input type="radio" name="sex" value="女">女<br>
+     年龄：<input type="text" name="age"><br>
+     邮箱：<input type="text" name="email"><br>
+     <input type="submit">
+ </form>
 <!--p26-->
 </body>
 </html>
