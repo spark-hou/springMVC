@@ -1,12 +1,11 @@
 package com.atguigu.mvc.controller;
 
+import com.atguigu.mvc.bean.User;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.lang.reflect.Array;
 
 @Controller
 public class TestController {
@@ -47,12 +46,13 @@ public class TestController {
         System.out.println(userName + password + " testParam" + host);
         return "success";
     }
-//p32
-    @GetMapping("/testpojo")
+   //p32
+    @PostMapping("/testpojo")
     public String testpojo(
-
+        User user
             ) {
-        System.out.println(user);
+        System.out.println(user+"=====");
         return "success";
     }
+    //p41
 }
